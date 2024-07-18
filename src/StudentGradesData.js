@@ -1,10 +1,8 @@
 // src/StudentGradesData.js
-
-export async function initializeData() {
-  const response = await fetch('/students.json');
+export const initializeData = async () => {
+  const response = await fetch(`${process.env.PUBLIC_URL}/students.json`);
   if (!response.ok) {
     throw new Error('Failed to fetch student data');
   }
-  const data = await response.json();
-  return data;
-}
+  return await response.json();
+};

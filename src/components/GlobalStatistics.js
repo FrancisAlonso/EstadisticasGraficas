@@ -173,8 +173,8 @@ const GlobalStatistics = () => {
           <Grid container spacing={2}>
             {tabIndex === 0 && renderCharts('General')}
             {tabIndex === 1 && renderCharts('Género')}
-            {tabIndex === 2 && renderCharts('Notas')}
-            {tabIndex === 3 && renderCharts('Aprobados')}
+            {tabIndex === 2 && renderCharts('Distribución de Notas')}
+            {tabIndex === 3 && renderCharts('Aprobados y Desaprobados')}
             {tabIndex === 4 && (
               <>
                 <Grid item xs={12} sm={6}>

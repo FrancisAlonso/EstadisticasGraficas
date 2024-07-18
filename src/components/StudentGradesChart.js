@@ -13,7 +13,7 @@ const StudentGradesChart = () => {
 
   useEffect(() => {
     let isMounted = true;
-    fetch('/students.json')
+    fetch(`${process.env.PUBLIC_URL}/students.json`)
       .then((response) => response.json())
       .then((data) => {
         if (isMounted) {
