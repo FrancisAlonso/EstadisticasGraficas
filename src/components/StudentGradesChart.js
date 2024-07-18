@@ -4,7 +4,7 @@ import 'chart.js/auto';
 import { Box, Typography, Container, List, ListItem, ListItemText, Grid, Paper, Select, MenuItem } from '@mui/material';
 
 const StudentGradesChart = () => {
-  const [selectedStudentId, setSelectedStudentId] = useState(1);
+  const [selectedStudentId, setSelectedStudentId] = useState('');
   const [selectedSubject, setSelectedSubject] = useState('Matemáticas');
   const [chartData, setChartData] = useState({});
   const [averageGrades, setAverageGrades] = useState({});
@@ -18,6 +18,9 @@ const StudentGradesChart = () => {
       .then((data) => {
         if (isMounted) {
           setStudents(data);
+          if (data.length > 0) {
+            setSelectedStudentId(data[0].id); // Selecciona el primer estudiante por defecto
+          }
         }
       })
       .catch(error => console.error('Error fetching student data:', error));

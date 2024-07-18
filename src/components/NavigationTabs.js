@@ -1,5 +1,3 @@
-// src/components/NavigationTabs.js
-
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Tabs, Tab, Box } from '@mui/material';
